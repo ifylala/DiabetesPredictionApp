@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <style type="text/css">
+        div {
+            color: #ff4d6b;
+            text-align: center; /* Center align the content within the div */
+            margin-top: 200px; /* Adjust the top margin */
+        }
+
+        h1 {
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 5px; /* Adjust the top margin */
+        }
+
+        p {
+            color: #ff4d6b;
+            font-family: Arial, sans-serif;
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 60px; /* Adjust the top margin */
+        }
+
+        h2 {
+            color: white;
+            font-family: Arial, sans-serif;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/static/images/Picture.jpg");
+            background-size: cover; /* Ensure the background image covers the entire viewport */
+            background-repeat: no-repeat; /* Prevent background image from repeating */
+            background-position: center center;
+            margin: 0; /* Remove default body margin */
+            padding: 0; /* Remove default body padding */
+            height: 100%;
+            background-attachment: fixed;
+        }
+
+        input[type=submit] {
+            background-color: #ff4d6b;
+            border: 2px;
+            color: white;
+            padding: 16px 32px;
+            cursor: pointer;
+            margin-top: 20px; /* Adjust the top margin */
+        }
+
+        /* Mobile responsiveness */
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 30px;
+            }
+
+            h2 {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>DIABETES PREDICTION SYSTEM</h1>
+    <p>Would you like to know your diabetes status?</p> <!-- Added the text here -->
+    <form action="/form">
+        <input type="submit" value="Check Here">
+    </form>
+</div>
+</body>
+</html>

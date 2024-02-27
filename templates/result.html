@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction Result</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('/static/images/ABCD2.jpg') center center fixed;
+            background-size: cover;
+            height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+
+      
+        .overlay {
+  position: absolute; 
+  background: rgba(57, 57, 57, 0.5);
+  
+  /* center overlay text */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+        .content {
+            background-color: white; 
+            border-radius: 10px; 
+            padding: 50px; 
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+            text-align: center; 
+            
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 2rem; 
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            font-size: 1.5rem; 
+        }
+
+        a {
+            color: #212529; 
+            text-decoration: none;
+            border: 1px solid #212529;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #212529;
+            color: white;
+        }
+
+        /* Media queries for smaller screens */
+        @media (max-width: 768px) {
+            h1, h2 {
+                font-size: 1.2rem;
+            }
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="content">
+        <h1>DIABETES PREDICTION RESULT</h1>
+        {% if prediction == "Diabetic" %}
+            <h2>Prediction: You are likely to be {{ prediction }} 😔. Kindly consult your Healthcare Provider</h2>
+        {% else %}
+            <h2>Prediction: You are {{ prediction }} 👏. Keep living a healthy life 👍</h2>
+        {% endif %}
+        <a href="/">Back to Home</a>
+    </div>
+</body>
+</html>

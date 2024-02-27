@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Prediction Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            text-align: center; 
+        }
+
+        .main {
+            width: 50%;
+            margin: 20px auto; 
+            background-color: #fff;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            margin: 0 auto; 
+            text-align: left; 
+        }
+
+        table tr {
+            margin-bottom: 10px;
+        }
+
+        table td {
+            padding: 2px 0px 2px 0px; 
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+
+
+        }
+
+        input[type="submit"] {
+            background-color: #ff4d6b;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+
+        }
+        .tab {
+            text-align: right;
+        }
+
+    
+
+        @media only screen and (max-width: 600px) {
+            .main {
+                width: 95%;
+            }
+            table td {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>ENTER THE FOLLOWING INFORMATION</h1>
+        <form action="/predict" method="post">
+            <table>
+                <tr>
+                    <td class="tab">Pregnancies:</td>
+                    <td><input type="text" name="n1"></td>
+                </tr>
+                <tr>
+                    <td class="tab">Glucose:</td>
+                    <td><input type="text" name="n2"></td>
+                </tr>
+                <tr>
+                    <td class="tab">Blood Pressure:</td>
+                    <td><input type="text" name="n3"></td>
+                </tr>
+                <tr>
+                    <td class="tab">Skin Thickness:</td>
+                    <td><input type="text" name="n4"></td>
+                </tr>
+                <tr>
+                    <td class="tab">Insulin:</td>
+                    <td><input type="text" name="n5"></td>
+                </tr>
+                <tr>
+                    <td class="tab">BMI :</td>
+                    <td><input type="text" name="n6"></td>
+                </tr>
+                <tr>
+                    <td class="tab">Diabetes Pedigree Function:</td>
+                    <td><input type="text" name="n7"></td>
+                </tr>
+                <tr>
+                    <td class="tab">Age:</td>
+                    <td><input type="text" name="n8"></td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
