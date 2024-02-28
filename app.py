@@ -12,8 +12,8 @@ current_directory = os.path.dirname(os.path.abspath(__file__))
 # Assuming the file is located in the same directory, join the current directory with the filename
 file_path = os.path.join(current_directory, 'diabetes.csv')
 
-# Load the dataset
-df = pd.read_csv('diabetes.csv')
+# Load the dataset using the file_path variable
+df = pd.read_csv(file_path)
 
 @app.route('/')
 def index():
