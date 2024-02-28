@@ -2,8 +2,15 @@ from flask import Flask, render_template, request
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
+import os
 
 app = Flask(__name__, static_folder='static')
+
+# Get the absolute path to the directory containing this script
+current_directory = os.path.dirname(os.path.abspath(__file__))
+
+# Assuming the file is located in the same directory, join the current directory with the filename
+file_path = os.path.join(current_directory, 'diabetes.csv')
 
 # Load the dataset
 df = pd.read_csv('diabetes.csv')
